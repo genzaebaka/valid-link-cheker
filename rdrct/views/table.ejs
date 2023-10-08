@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirect Check</title>
+</head>
+<body>
+  <h1>Redirect Check Results</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>URL</th>
+        <th>Redirected To</th>
+        <th>Error</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% results.forEach(result => { %>
+        <tr>
+          <td><%= result.url %></td>
+          <td><%= result.redirectedTo || 'Not redirected' %></td>
+          <td><%= result.error || 'No error' %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>
